@@ -14,29 +14,26 @@ struct ReaderView: View {
     @State var currentFontSize: CGFloat = 18.0
     @State var isChapterSheetVisible: Bool = false
     @State var isFontSizeSheetVisible: Bool = false
-    
     @State var isHiddenMode: Bool = false
-   
-    private let sampleText = """
-    Bölüm 1
-
-    Brook ön kapıdan sessizce dışarı çıktı ve evin yan tarafına doğru süründü.
-
-    Annesi bu gece Tom ile odadaydı. Tom'un elleri onun memesini okşarken tutkulu bir şekilde öpüşüyorlardı.
-
-    "Ahhhh." diye inledi annesi, Tom dudaklarını aşağıya doğru hareket ettirirken.
-
-    "Şşşş, bağırma, Brook'u uyandırabilirsin." dedi Tom, onun klitoris­ini yalarken. Bu hareket, Janice'in vücudunda bir duygu patlaması yarattı.
-
-    Tom'un usta dili klitorisini yukarı aşağı hareket ettiriyordu…
-    """
     
+    @StateObject var readerViewModel: ReaderViewModel 
     
     var body: some View {
         ZStack {
-            ScrollView {
-                Text(sampleText)
-                    .font(.system(size: currentFontSize))
+            
+            //TEXT CONTENT
+            VStack {
+                GeometryReader { geometry in
+                    let availableHeight = geometry.size.height
+                    let textHeight = calculateTextHeight(forFontSize: currentFontSize)
+                    
+                    let adjustedFontSize = availableHeight / textHeight * currentFontSize
+                    Text(readerViewModel.chapter1)
+                        .font(.system(size: currentFontSize))
+                        .id(currentFontSize)
+                        .padding()
+                }
+
             }.padding()
                 .onTapGesture {
                     withAnimation(.easeInOut) {
@@ -44,7 +41,7 @@ struct ReaderView: View {
                     }
                 }
             
-            
+            //BOTTOM MENU
             VStack {
                 Spacer()
                 if !isHiddenMode {
@@ -58,22 +55,28 @@ struct ReaderView: View {
                 }
                     
             }.ignoresSafeArea()
-                
+            
+            //PAGE MOVE BUTTONS
+            GeometryReader { proxy in
+                HStack {
+                    MoveToPageButton(geometryProxy: proxy)
+                        .onTapGesture {
+                            print("left")
+                        }
+                    
+                    Spacer()
+                    
+                    MoveToPageButton(geometryProxy: proxy)
+                        .onTapGesture {
+                            print("right")
+                        }
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         
-        .sheet(isPresented: $isChapterSheetVisible, content: {
-            ChapterListSheet()
-                .presentationDetents([.medium])
-                .presentationDragIndicator(.visible)
-        })
-        .sheet(isPresented: $isFontSizeSheetVisible, content: {
-            FontSizeSheet(value: $currentFontSize) { fontSize in
-                print("selected: \(fontSize)")
-                currentFontSize = CGFloat(fontSize)
-            }
-                .presentationDetents([.height(160.0)])
-                .presentationDragIndicator(.visible)
-        })
+        .modifier(ChapterSheetModifier(isChapterVisible: $isChapterSheetVisible))
+        .modifier(FontSizeSheetModifier(isFontSizeSheetVisible: $isFontSizeSheetVisible, currentFontSize: $currentFontSize))
         .preferredColorScheme(isDarkMode ? .dark : .light)
         .navigationTitle("Book Name")
         .toolbarTitleDisplayMode(.inline)
@@ -92,6 +95,62 @@ struct ReaderView: View {
             isFontSizeSheetVisible.toggle()
         case .exit:
             print("exit")
+        }
+    }
+    
+    func calculateTextHeight(forFontSize fontSize: CGFloat) -> CGFloat {
+        // Approximate a single line height based on the font size
+        let lineHeight = fontSize * 1.2 // Adjust this multiplier as needed for line spacing
+        let numberOfLines = readerViewModel.chapter1.split(separator: "\n").count
+        return lineHeight * CGFloat(numberOfLines)
+    }
+
+}
+
+private struct ChapterSheetModifier: ViewModifier {
+    
+    @Binding var isChapterVisible: Bool
+    
+    func body(content: Content) -> some View {
+        content
+            .sheet(isPresented: $isChapterVisible, content: {
+                ChapterListSheet()
+                    .presentationDetents([.medium])
+                    .presentationDragIndicator(.visible)
+            })
+    }
+}
+
+private struct FontSizeSheetModifier: ViewModifier {
+    
+    @Binding var isFontSizeSheetVisible: Bool
+    @Binding var currentFontSize: CGFloat
+    
+    func body(content: Content) -> some View {
+        content
+            .sheet(isPresented: $isFontSizeSheetVisible, content: {
+                FontSizeSheet(value: $currentFontSize) { fontSize in
+                    print("selected: \(fontSize)")
+                    currentFontSize = CGFloat(fontSize)
+                }
+                    .presentationDetents([.height(160.0)])
+                    .presentationDragIndicator(.visible)
+            })
+    }
+}
+
+private struct MoveToPageButton: View {
+    
+    var geometryProxy: GeometryProxy
+    
+    var body: some View {
+        VStack {
+            Spacer()
+            Color.clear
+                .frame(width: geometryProxy.size.width * 0.3, height: geometryProxy.size.height * 0.7)
+                .contentShape(Rectangle())
+                
+            Spacer()
         }
     }
 }
@@ -155,6 +214,6 @@ struct BottomButtonStyle: ButtonStyle {
 }
 
 #Preview {
-    ReaderView()
+    ReaderView(readerViewModel: ReaderViewModel())
 }
 

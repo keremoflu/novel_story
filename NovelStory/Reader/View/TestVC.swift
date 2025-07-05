@@ -10,7 +10,7 @@ import SwiftUI
 struct TestVC: View {
     var body: some View {
         NavigationView {
-            NavigationLink (destination: ReaderView()) {
+            NavigationLink (destination: ReaderView(readerViewModel: ReaderViewModel())) {
                 Text("Hello, World!")
             }
         }
