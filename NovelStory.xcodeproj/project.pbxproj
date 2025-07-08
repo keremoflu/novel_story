@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0C5D5D362E17071100C8F751 /* ChapterListSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5D5D352E17071100C8F751 /* ChapterListSheet.swift */; };
 		0C5D5D382E170AAB00C8F751 /* FontSizeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5D5D372E170AAB00C8F751 /* FontSizeSheet.swift */; };
-		0C97F08C2E18753200911414 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C97F08B2E18753200911414 /* GoogleService-Info.plist */; };
 		0C97F08F2E18789100911414 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0C97F08E2E18789100911414 /* FirebaseAnalytics */; };
 		0C97F0912E18789100911414 /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0C97F0902E18789100911414 /* FirebaseAnalyticsCore */; };
 		0C97F0932E18789100911414 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 0C97F0922E18789100911414 /* FirebaseAppCheck */; };
@@ -35,7 +34,6 @@
 		0C37125C2E0F280C00F42601 /* NovelStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NovelStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C5D5D352E17071100C8F751 /* ChapterListSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterListSheet.swift; sourceTree = "<group>"; };
 		0C5D5D372E170AAB00C8F751 /* FontSizeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeSheet.swift; sourceTree = "<group>"; };
-		0C97F08B2E18753200911414 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0C97F0A52E187B0000911414 /* ReaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewModel.swift; sourceTree = "<group>"; };
 		0C97F0A92E19A75E00911414 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		0C97F0AB2E19A80500911414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 				0CA7D2B12E107D5F00E851E1 /* Preview Content */,
 				0CA7D2B22E107D5F00E851E1 /* Assets.xcassets */,
 				0CA7D2B42E107D5F00E851E1 /* NovelStoryApp.swift */,
-				0C97F08B2E18753200911414 /* GoogleService-Info.plist */,
 				0C97F0AB2E19A80500911414 /* AppDelegate.swift */,
 			);
 			path = NovelStory;
@@ -227,7 +224,6 @@
 			files = (
 				0CA7D2B72E107D5F00E851E1 /* Preview Assets.xcassets in Resources */,
 				0CA7D2B82E107D5F00E851E1 /* Assets.xcassets in Resources */,
-				0C97F08C2E18753200911414 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
