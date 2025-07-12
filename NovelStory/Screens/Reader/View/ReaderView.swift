@@ -11,10 +11,12 @@ struct ReaderView: View {
     
     //Bottom Menu
     @State var isDarkMode: Bool = false
-    @State var currentFontSize: CGFloat = 18.0
+    @State var currentFontSize: CGFloat = 20.0
     @State var isChapterSheetVisible: Bool = false
     @State var isFontSizeSheetVisible: Bool = false
     @State var isHiddenMode: Bool = false
+    
+    @State var bookText: String = ""
     
     @StateObject var readerViewModel: ReaderViewModel 
     
@@ -22,19 +24,20 @@ struct ReaderView: View {
         ZStack {
             
             //TEXT CONTENT
-            VStack {
-                GeometryReader { geometry in
-                    let availableHeight = geometry.size.height
-                    let textHeight = calculateTextHeight(forFontSize: currentFontSize)
-                    
-                    let adjustedFontSize = availableHeight / textHeight * currentFontSize
-                    Text(readerViewModel.chapter1)
+            VStack (alignment: .leading) {
+                Text(bookText)
                         .font(.system(size: currentFontSize))
-                        .id(currentFontSize)
-                        .padding()
-                }
+                        .multilineTextAlignment(.leading)
+                        .lineSpacing(3.0)
+                        .task {
+                            readerViewModel.initialize()
+                            bookText = readerViewModel.pages.first ?? ""
+                        }
+                
+                Spacer(minLength: 0)
 
-            }.padding()
+            }
+            .padding()
                 .onTapGesture {
                     withAnimation(.easeInOut) {
                         isHiddenMode.toggle()
@@ -53,7 +56,6 @@ struct ReaderView: View {
                             .combined(with: .opacity)
                         )
                 }
-                    
             }.ignoresSafeArea()
             
             //PAGE MOVE BUTTONS
@@ -61,21 +63,23 @@ struct ReaderView: View {
                 HStack {
                     MoveToPageButton(geometryProxy: proxy)
                         .onTapGesture {
-                            print("left")
+                            bookText = readerViewModel.goPreviousPage()
                         }
                     
                     Spacer()
                     
                     MoveToPageButton(geometryProxy: proxy)
                         .onTapGesture {
-                            print("right")
+                            bookText = readerViewModel.goNextPage()
                         }
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         
-        .modifier(ChapterSheetModifier(isChapterVisible: $isChapterSheetVisible))
+        .modifier(ChapterSheetModifier(
+            isChapterVisible: $isChapterSheetVisible,
+            chapterCount: $readerViewModel.chapters.count))
         .modifier(FontSizeSheetModifier(isFontSizeSheetVisible: $isFontSizeSheetVisible, currentFontSize: $currentFontSize))
         .preferredColorScheme(isDarkMode ? .dark : .light)
         .navigationTitle("Book Name")
@@ -97,24 +101,17 @@ struct ReaderView: View {
             print("exit")
         }
     }
-    
-    func calculateTextHeight(forFontSize fontSize: CGFloat) -> CGFloat {
-        // Approximate a single line height based on the font size
-        let lineHeight = fontSize * 1.2 // Adjust this multiplier as needed for line spacing
-        let numberOfLines = readerViewModel.chapter1.split(separator: "\n").count
-        return lineHeight * CGFloat(numberOfLines)
-    }
-
 }
 
 private struct ChapterSheetModifier: ViewModifier {
     
     @Binding var isChapterVisible: Bool
+    var chapterCount: Int
     
     func body(content: Content) -> some View {
         content
             .sheet(isPresented: $isChapterVisible, content: {
-                ChapterListSheet()
+                ChapterListSheet(chapterCount: chapterCount)
                     .presentationDetents([.medium])
                     .presentationDragIndicator(.visible)
             })
