@@ -77,7 +77,9 @@ struct ReaderView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         
-        .modifier(ChapterSheetModifier(isChapterVisible: $isChapterSheetVisible))
+        .modifier(ChapterSheetModifier(
+            isChapterVisible: $isChapterSheetVisible,
+            chapterCount: $readerViewModel.chapters.count))
         .modifier(FontSizeSheetModifier(isFontSizeSheetVisible: $isFontSizeSheetVisible, currentFontSize: $currentFontSize))
         .preferredColorScheme(isDarkMode ? .dark : .light)
         .navigationTitle("Book Name")
@@ -104,11 +106,12 @@ struct ReaderView: View {
 private struct ChapterSheetModifier: ViewModifier {
     
     @Binding var isChapterVisible: Bool
+    var chapterCount: Int
     
     func body(content: Content) -> some View {
         content
             .sheet(isPresented: $isChapterVisible, content: {
-                ChapterListSheet()
+                ChapterListSheet(chapterCount: chapterCount)
                     .presentationDetents([.medium])
                     .presentationDragIndicator(.visible)
             })

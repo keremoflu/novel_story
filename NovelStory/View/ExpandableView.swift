@@ -18,11 +18,15 @@ struct ExpandableView: View {
                     Text("Summary")
                     Spacer()
                     Image(systemName: "arrowtriangle.up.fill")
-                        .onTapGesture {
-                            withAnimation {
-                                isCollapsed.toggle()
-                            }
-                        }
+                        .rotationEffect(.degrees(isCollapsed ? 0.0 : 180.0))
+                        
+                }
+                .padding(.vertical, 8)
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    withAnimation {
+                        isCollapsed.toggle()
+                    }
                 }
                 
                 
