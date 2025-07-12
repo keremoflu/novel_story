@@ -15,7 +15,7 @@ struct NovelStoryApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ReaderView(readerViewModel: ReaderViewModel())
+            HomePage()
         }
     }
 }

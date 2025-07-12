@@ -23,10 +23,10 @@ struct FontSizeSheet: View {
                     .font(.system(size: 14))
                     .padding(.bottom)
                 Slider(value: $value, in: 18...24, step: 1.0)
-                    .onChange(of: value) { oldValue, newValue in
-                        print("new val: \(newValue)")
-                        action(Int(newValue))
-                    }
+//                    .onChange(of: value) { oldValue, newValue in
+//                        print("new val: \(newValue)")
+//                        action(Int(newValue))
+//                    }
                 Text("Aa")
                     .font(.system(size: 20))
                     .padding(.bottom)
