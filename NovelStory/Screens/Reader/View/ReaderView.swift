@@ -30,7 +30,7 @@ struct ReaderView: View {
                         .multilineTextAlignment(.leading)
                         .lineSpacing(3.0)
                         .task {
-                            readerViewModel.separatePages()
+                            readerViewModel.initialize()
                             bookText = readerViewModel.pages.first ?? ""
                         }
                 
@@ -56,7 +56,6 @@ struct ReaderView: View {
                             .combined(with: .opacity)
                         )
                 }
-                    
             }.ignoresSafeArea()
             
             //PAGE MOVE BUTTONS
@@ -86,10 +85,7 @@ struct ReaderView: View {
         .tint(.black)
         .statusBarHidden(isHiddenMode)
         .toolbar(isHiddenMode ? .hidden : .visible, for: .navigationBar)
-        
     }
-    
-    
     
     private func bottomMenuSelected(item: BottomView.BottomMenu) {
         switch item {
