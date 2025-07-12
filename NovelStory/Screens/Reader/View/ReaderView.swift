@@ -83,7 +83,7 @@ struct ReaderView: View {
         .modifier(FontSizeSheetModifier(isFontSizeSheetVisible: $isFontSizeSheetVisible, currentFontSize: $currentFontSize))
         .preferredColorScheme(isDarkMode ? .dark : .light)
         .navigationTitle("Book Name")
-        .toolbarTitleDisplayMode(.inline)
+//        .toolbarTitleDisplayMode(.inline)
         .tint(.black)
         .statusBarHidden(isHiddenMode)
         .toolbar(isHiddenMode ? .hidden : .visible, for: .navigationBar)

@@ -11,8 +11,6 @@
 		0C1A715C2E1FEACC00ABEF95 /* BookPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A715B2E1FEACC00ABEF95 /* BookPreviewView.swift */; };
 		0C1A715E2E1FEB0600ABEF95 /* BookPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A715D2E1FEB0600ABEF95 /* BookPreviewViewModel.swift */; };
 		0C1A71602E1FFF9D00ABEF95 /* ChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A715F2E1FFF9D00ABEF95 /* ChipView.swift */; };
-		0C5D5D362E17071100C8F751 /* ChapterListSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5D5D352E17071100C8F751 /* ChapterListSheet.swift */; };
-		0C5D5D382E170AAB00C8F751 /* FontSizeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5D5D372E170AAB00C8F751 /* FontSizeSheet.swift */; };
 		0C879D0C2E22E3B900862F9B /* BookDetailTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C879D0B2E22E3B900862F9B /* BookDetailTopView.swift */; };
 		0C97F08F2E18789100911414 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0C97F08E2E18789100911414 /* FirebaseAnalytics */; };
 		0C97F0912E18789100911414 /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0C97F0902E18789100911414 /* FirebaseAnalyticsCore */; };
@@ -25,14 +23,31 @@
 		0C97F09F2E18789100911414 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 0C97F09E2E18789100911414 /* FirebaseFunctions */; };
 		0C97F0A12E18789100911414 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 0C97F0A02E18789100911414 /* FirebaseRemoteConfig */; };
 		0C97F0A32E18789100911414 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0C97F0A22E18789100911414 /* FirebaseStorage */; };
-		0C97F0A62E187B0000911414 /* ReaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C97F0A52E187B0000911414 /* ReaderViewModel.swift */; };
-		0C97F0AA2E19A75E00911414 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C97F0A92E19A75E00911414 /* SplashView.swift */; };
 		0C97F0AC2E19A80500911414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C97F0AB2E19A80500911414 /* AppDelegate.swift */; };
 		0CA7D2B72E107D5F00E851E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CA7D2B02E107D5F00E851E1 /* Preview Assets.xcassets */; };
 		0CA7D2B82E107D5F00E851E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CA7D2B22E107D5F00E851E1 /* Assets.xcassets */; };
-		0CA7D2B92E107D5F00E851E1 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7D2B32E107D5F00E851E1 /* ReaderView.swift */; };
 		0CA7D2BA2E107D5F00E851E1 /* NovelStoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7D2B42E107D5F00E851E1 /* NovelStoryApp.swift */; };
-		0CA7D2BB2E107D5F00E851E1 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7D2B52E107D5F00E851E1 /* TestVC.swift */; };
+		9B22CFC02E19B00C00FE39C2 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B22CFBF2E19B00C00FE39C2 /* HomePage.swift */; };
+		9B22CFC22E19B91A00FE39C2 /* LinearTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B22CFC12E19B91A00FE39C2 /* LinearTop.swift */; };
+		9B22CFC42E19BB8C00FE39C2 /* TrendingBookListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B22CFC32E19BB8C00FE39C2 /* TrendingBookListItem.swift */; };
+		9B22CFCD2E19BD2E00FE39C2 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B22CFC62E19BD2E00FE39C2 /* Montserrat-Bold.ttf */; };
+		9B22CFCE2E19BD2E00FE39C2 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B22CFC72E19BD2E00FE39C2 /* Montserrat-ExtraBold.ttf */; };
+		9B22CFCF2E19BD2E00FE39C2 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B22CFC92E19BD2E00FE39C2 /* Montserrat-Medium.ttf */; };
+		9B22CFD02E19BD2E00FE39C2 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B22CFCB2E19BD2E00FE39C2 /* Montserrat-SemiBold.ttf */; };
+		9B22CFD12E19BD2E00FE39C2 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B22CFCC2E19BD2E00FE39C2 /* Montserrat-Thin.ttf */; };
+		9B22CFD22E19BD2E00FE39C2 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B22CFCA2E19BD2E00FE39C2 /* Montserrat-Regular.ttf */; };
+		9B22CFD32E19BD2E00FE39C2 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B22CFC82E19BD2E00FE39C2 /* Montserrat-Light.ttf */; };
+		9B22CFDC2E19BF1A00FE39C2 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B22CFDB2E19BF1A00FE39C2 /* Font+Extension.swift */; };
+		9B9A373E2E22C74C00426818 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A373D2E22C74C00426818 /* HomeViewModel.swift */; };
+		9B9A37402E22D0BD00426818 /* EditorsPickBookListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A373F2E22D0BD00426818 /* EditorsPickBookListItem.swift */; };
+		9B9A37422E22DDF300426818 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A37412E22DDF300426818 /* View+Extension.swift */; };
+		9B9A37452E22E64400426818 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 9B9A37442E22E64400426818 /* Flow */; };
+		9BAA807F2E22EF1E004C4B63 /* ReaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA807C2E22EF1E004C4B63 /* ReaderViewModel.swift */; };
+		9BAA80802E22EF1E004C4B63 /* FontSizeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA80782E22EF1E004C4B63 /* FontSizeSheet.swift */; };
+		9BAA80812E22EF1E004C4B63 /* ChapterListSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA80772E22EF1E004C4B63 /* ChapterListSheet.swift */; };
+		9BAA80822E22EF1E004C4B63 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA80792E22EF1E004C4B63 /* ReaderView.swift */; };
+		9BAA80832E22EF1E004C4B63 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA807A2E22EF1E004C4B63 /* TestVC.swift */; };
+		9BAA80872E22EF39004C4B63 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA80842E22EF39004C4B63 /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,17 +56,32 @@
 		0C1A715D2E1FEB0600ABEF95 /* BookPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPreviewViewModel.swift; sourceTree = "<group>"; };
 		0C1A715F2E1FFF9D00ABEF95 /* ChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipView.swift; sourceTree = "<group>"; };
 		0C37125C2E0F280C00F42601 /* NovelStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NovelStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C5D5D352E17071100C8F751 /* ChapterListSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterListSheet.swift; sourceTree = "<group>"; };
-		0C5D5D372E170AAB00C8F751 /* FontSizeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeSheet.swift; sourceTree = "<group>"; };
 		0C879D0B2E22E3B900862F9B /* BookDetailTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailTopView.swift; sourceTree = "<group>"; };
-		0C97F0A52E187B0000911414 /* ReaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewModel.swift; sourceTree = "<group>"; };
-		0C97F0A92E19A75E00911414 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		0C97F0AB2E19A80500911414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CA7D2B02E107D5F00E851E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0CA7D2B22E107D5F00E851E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0CA7D2B32E107D5F00E851E1 /* ReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
 		0CA7D2B42E107D5F00E851E1 /* NovelStoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelStoryApp.swift; sourceTree = "<group>"; };
-		0CA7D2B52E107D5F00E851E1 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		9B22CFBF2E19B00C00FE39C2 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		9B22CFC12E19B91A00FE39C2 /* LinearTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearTop.swift; sourceTree = "<group>"; };
+		9B22CFC32E19BB8C00FE39C2 /* TrendingBookListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingBookListItem.swift; sourceTree = "<group>"; };
+		9B22CFC62E19BD2E00FE39C2 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		9B22CFC72E19BD2E00FE39C2 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		9B22CFC82E19BD2E00FE39C2 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		9B22CFC92E19BD2E00FE39C2 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		9B22CFCA2E19BD2E00FE39C2 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		9B22CFCB2E19BD2E00FE39C2 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		9B22CFCC2E19BD2E00FE39C2 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		9B22CFD72E19BE8000FE39C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9B22CFDB2E19BF1A00FE39C2 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		9B9A373D2E22C74C00426818 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9B9A373F2E22D0BD00426818 /* EditorsPickBookListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorsPickBookListItem.swift; sourceTree = "<group>"; };
+		9B9A37412E22DDF300426818 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		9BAA80772E22EF1E004C4B63 /* ChapterListSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterListSheet.swift; sourceTree = "<group>"; };
+		9BAA80782E22EF1E004C4B63 /* FontSizeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeSheet.swift; sourceTree = "<group>"; };
+		9BAA80792E22EF1E004C4B63 /* ReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
+		9BAA807A2E22EF1E004C4B63 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		9BAA807C2E22EF1E004C4B63 /* ReaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewModel.swift; sourceTree = "<group>"; };
+		9BAA80842E22EF39004C4B63 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +97,7 @@
 				0C97F0912E18789100911414 /* FirebaseAnalyticsCore in Frameworks */,
 				0C97F09D2E18789100911414 /* FirebaseFirestore in Frameworks */,
 				0C97F09B2E18789100911414 /* FirebaseDatabase in Frameworks */,
+				9B9A37452E22E64400426818 /* Flow in Frameworks */,
 				0C97F0A32E18789100911414 /* FirebaseStorage in Frameworks */,
 				0C97F0952E18789100911414 /* FirebaseAuth in Frameworks */,
 				0C97F0A12E18789100911414 /* FirebaseRemoteConfig in Frameworks */,
@@ -89,8 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				0C1A715A2E1FEABF00ABEF95 /* Book Preview */,
-				0C97F0A72E19A74800911414 /* Splash */,
-				0CA7D2BC2E107D6200E851E1 /* Reader */,
+				9BAA807E2E22EF1E004C4B63 /* Reader */,
+				9BAA80862E22EF39004C4B63 /* Splash */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -129,30 +160,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		0C97F0A42E187AF500911414 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				0C97F0A52E187B0000911414 /* ReaderViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		0C97F0A72E19A74800911414 /* Splash */ = {
-			isa = PBXGroup;
-			children = (
-				0C97F0A82E19A74E00911414 /* View */,
-			);
-			path = Splash;
-			sourceTree = "<group>";
-		};
-		0C97F0A82E19A74E00911414 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				0C97F0A92E19A75E00911414 /* SplashView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		0CA7D2B12E107D5F00E851E1 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +171,10 @@
 		0CA7D2B62E107D5F00E851E1 /* NovelStory */ = {
 			isa = PBXGroup;
 			children = (
+				9B22CFD72E19BE8000FE39C2 /* Info.plist */,
+				9B22CFD52E19BD7E00FE39C2 /* Shared */,
+				9B22CFC52E19BD2200FE39C2 /* Resources */,
+				9B22CFBD2E19AE0B00FE39C2 /* Home */,
 				0C1A71592E1FEAA300ABEF95 /* Screens */,
 				0C1A71562E1FE55400ABEF95 /* View */,
 				0CA7D2B12E107D5F00E851E1 /* Preview Content */,
@@ -174,24 +185,107 @@
 			path = NovelStory;
 			sourceTree = "<group>";
 		};
-		0CA7D2BC2E107D6200E851E1 /* Reader */ = {
+		9B22CFBD2E19AE0B00FE39C2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				0C97F0A42E187AF500911414 /* ViewModel */,
-				0CA7D2BD2E107D6800E851E1 /* View */,
+				9B22CFBE2E19AFFB00FE39C2 /* View */,
+				9B9A373D2E22C74C00426818 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9B22CFBE2E19AFFB00FE39C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B22CFBF2E19B00C00FE39C2 /* HomePage.swift */,
+				9B22CFC12E19B91A00FE39C2 /* LinearTop.swift */,
+				9B22CFC32E19BB8C00FE39C2 /* TrendingBookListItem.swift */,
+				9B9A373F2E22D0BD00426818 /* EditorsPickBookListItem.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B22CFC52E19BD2200FE39C2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9B22CFD42E19BD4900FE39C2 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9B22CFD42E19BD4900FE39C2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9B22CFC62E19BD2E00FE39C2 /* Montserrat-Bold.ttf */,
+				9B22CFC72E19BD2E00FE39C2 /* Montserrat-ExtraBold.ttf */,
+				9B22CFC82E19BD2E00FE39C2 /* Montserrat-Light.ttf */,
+				9B22CFC92E19BD2E00FE39C2 /* Montserrat-Medium.ttf */,
+				9B22CFCA2E19BD2E00FE39C2 /* Montserrat-Regular.ttf */,
+				9B22CFCB2E19BD2E00FE39C2 /* Montserrat-SemiBold.ttf */,
+				9B22CFCC2E19BD2E00FE39C2 /* Montserrat-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9B22CFD52E19BD7E00FE39C2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				9B22CFDA2E19BF0C00FE39C2 /* Extensions */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		9B22CFDA2E19BF0C00FE39C2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9B22CFDB2E19BF1A00FE39C2 /* Font+Extension.swift */,
+				9B9A37412E22DDF300426818 /* View+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9BAA807B2E22EF1E004C4B63 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9BAA80772E22EF1E004C4B63 /* ChapterListSheet.swift */,
+				9BAA80782E22EF1E004C4B63 /* FontSizeSheet.swift */,
+				9BAA80792E22EF1E004C4B63 /* ReaderView.swift */,
+				9BAA807A2E22EF1E004C4B63 /* TestVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9BAA807D2E22EF1E004C4B63 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9BAA807C2E22EF1E004C4B63 /* ReaderViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9BAA807E2E22EF1E004C4B63 /* Reader */ = {
+			isa = PBXGroup;
+			children = (
+				9BAA807B2E22EF1E004C4B63 /* View */,
+				9BAA807D2E22EF1E004C4B63 /* ViewModel */,
 			);
 			path = Reader;
 			sourceTree = "<group>";
 		};
-		0CA7D2BD2E107D6800E851E1 /* View */ = {
+		9BAA80852E22EF39004C4B63 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0CA7D2B32E107D5F00E851E1 /* ReaderView.swift */,
-				0CA7D2B52E107D5F00E851E1 /* TestVC.swift */,
-				0C5D5D352E17071100C8F751 /* ChapterListSheet.swift */,
-				0C5D5D372E170AAB00C8F751 /* FontSizeSheet.swift */,
+				9BAA80842E22EF39004C4B63 /* SplashView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9BAA80862E22EF39004C4B63 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				9BAA80852E22EF39004C4B63 /* View */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +316,7 @@
 				0C97F09E2E18789100911414 /* FirebaseFunctions */,
 				0C97F0A02E18789100911414 /* FirebaseRemoteConfig */,
 				0C97F0A22E18789100911414 /* FirebaseStorage */,
+				9B9A37442E22E64400426818 /* Flow */,
 			);
 			productName = NovelStory;
 			productReference = 0C37125C2E0F280C00F42601 /* NovelStory.app */;
@@ -253,6 +348,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				0C97F08D2E18789100911414 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9B9A37432E22E64400426818 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0C37125D2E0F280C00F42601 /* Products */;
@@ -271,6 +367,13 @@
 			files = (
 				0CA7D2B72E107D5F00E851E1 /* Preview Assets.xcassets in Resources */,
 				0CA7D2B82E107D5F00E851E1 /* Assets.xcassets in Resources */,
+				9B22CFCD2E19BD2E00FE39C2 /* Montserrat-Bold.ttf in Resources */,
+				9B22CFCE2E19BD2E00FE39C2 /* Montserrat-ExtraBold.ttf in Resources */,
+				9B22CFCF2E19BD2E00FE39C2 /* Montserrat-Medium.ttf in Resources */,
+				9B22CFD02E19BD2E00FE39C2 /* Montserrat-SemiBold.ttf in Resources */,
+				9B22CFD12E19BD2E00FE39C2 /* Montserrat-Thin.ttf in Resources */,
+				9B22CFD22E19BD2E00FE39C2 /* Montserrat-Regular.ttf in Resources */,
+				9B22CFD32E19BD2E00FE39C2 /* Montserrat-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,19 +384,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B22CFC02E19B00C00FE39C2 /* HomePage.swift in Sources */,
 				0C1A715C2E1FEACC00ABEF95 /* BookPreviewView.swift in Sources */,
 				0C97F0AC2E19A80500911414 /* AppDelegate.swift in Sources */,
-				0CA7D2B92E107D5F00E851E1 /* ReaderView.swift in Sources */,
-				0C5D5D362E17071100C8F751 /* ChapterListSheet.swift in Sources */,
+				9B22CFDC2E19BF1A00FE39C2 /* Font+Extension.swift in Sources */,
+				9B22CFC42E19BB8C00FE39C2 /* TrendingBookListItem.swift in Sources */,
+				9B9A37402E22D0BD00426818 /* EditorsPickBookListItem.swift in Sources */,
+				9B9A37422E22DDF300426818 /* View+Extension.swift in Sources */,
+				9B22CFC22E19B91A00FE39C2 /* LinearTop.swift in Sources */,
 				0CA7D2BA2E107D5F00E851E1 /* NovelStoryApp.swift in Sources */,
+				9B9A373E2E22C74C00426818 /* HomeViewModel.swift in Sources */,
 				0C879D0C2E22E3B900862F9B /* BookDetailTopView.swift in Sources */,
 				0C1A71582E1FE55E00ABEF95 /* ExpandableView.swift in Sources */,
 				0C1A715E2E1FEB0600ABEF95 /* BookPreviewViewModel.swift in Sources */,
-				0C5D5D382E170AAB00C8F751 /* FontSizeSheet.swift in Sources */,
 				0C1A71602E1FFF9D00ABEF95 /* ChipView.swift in Sources */,
-				0CA7D2BB2E107D5F00E851E1 /* TestVC.swift in Sources */,
-				0C97F0A62E187B0000911414 /* ReaderViewModel.swift in Sources */,
-				0C97F0AA2E19A75E00911414 /* SplashView.swift in Sources */,
+				9BAA807F2E22EF1E004C4B63 /* ReaderViewModel.swift in Sources */,
+				9BAA80802E22EF1E004C4B63 /* FontSizeSheet.swift in Sources */,
+				9BAA80812E22EF1E004C4B63 /* ChapterListSheet.swift in Sources */,
+				9BAA80872E22EF39004C4B63 /* SplashView.swift in Sources */,
+				9BAA80822E22EF1E004C4B63 /* ReaderView.swift in Sources */,
+				9BAA80832E22EF1E004C4B63 /* TestVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,14 +537,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NovelStory/Preview Content\"";
-				DEVELOPMENT_TEAM = BLD2PJU7J8;
+				DEVELOPMENT_TEAM = 6NB8629MH8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NovelStory/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,14 +568,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NovelStory/Preview Content\"";
-				DEVELOPMENT_TEAM = BLD2PJU7J8;
+				DEVELOPMENT_TEAM = 6NB8629MH8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NovelStory/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -507,6 +621,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 11.15.0;
+			};
+		};
+		9B9A37432E22E64400426818 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tevelee/SwiftUI-Flow";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -566,6 +688,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0C97F08D2E18789100911414 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		9B9A37442E22E64400426818 /* Flow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B9A37432E22E64400426818 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */;
+			productName = Flow;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
