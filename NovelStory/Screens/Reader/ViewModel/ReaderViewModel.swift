@@ -30,7 +30,6 @@ class ReaderViewModel: ObservableObject {
         """
     ]
     
-    // Pagination parameters
     var pageCharacterLimit: Int = 0
     
     // State for chapter and page
@@ -75,7 +74,6 @@ class ReaderViewModel: ObservableObject {
         currentPageIndex = 0
     }
     
-    // MARK: - Page Navigation
     func goNextPage() -> String {
         if currentPageIndex + 1 < pages.count {
             currentPageIndex += 1
