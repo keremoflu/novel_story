@@ -8,44 +8,52 @@
 import SwiftUI
 
 struct BookDetailTopView: View {
+    
+    var isImageTapped: () -> Void
+    var namespace: Namespace.ID
+    var image: ImageResource
+    
     var body: some View {
+        
         VStack {
             GeometryReader { proxy in
                 HStack(spacing: 16) {
-                    Image(.cover4)
+                    Image(image)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: proxy.size.width * 0.3, height: proxy.size.height)
                         .clipShape(.rect(cornerRadius: 8))
+                        .matchedGeometryEffect(id: "bookImage", in: namespace)
                         .padding(.leading)
+                        .onTapGesture {
+                            isImageTapped()
+                        }
                     
-                VStack (alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: 8) {
                         Text("Crown on Light Crown on Book Name")
-                            .font(.system(size: 20))
-                            .fontWeight(.semibold)
+                            .font(.montserrat(size: 20, weight: .semiBold))
                             .lineLimit(2)
                             .multilineTextAlignment(.leading)
                             .foregroundStyle(.white)
                         
                         Text("24 Chapters")
-                        .font(.system(size: 16))
-                        .fontWeight(.regular)
-                        .foregroundStyle(.white)
+                            .font(.montserrat(size: 16, weight: .regular))
+                            .foregroundStyle(.white)
 
-                    Spacer()
+                        Spacer()
+                        
                         Text("203.K Views")
-                        .font(.system(size: 18))
-                        .fontWeight(.regular)
-                        .foregroundStyle(.gray)
-                    
-                }.frame(width: .infinity, height: 160)
-               
+                            .font(.montserrat(size: 18, weight: .regular))
+                            .foregroundStyle(.gray)
+                    }
+                    .frame(height: 160)
                 }
-            }.frame(maxWidth: .infinity, maxHeight: 160)
+            }
+            .frame(maxWidth: .infinity, maxHeight: 160)
             .padding(.bottom, 64)
             .background(
                 ZStack {
-                    Image(.cover4)
+                    Image(image)  // use same image for background blur
                         .resizable()
                         .overlay(.ultraThinMaterial)
                     
@@ -53,12 +61,12 @@ struct BookDetailTopView: View {
                 }.ignoresSafeArea()
             )
             
-            
             Spacer()
         }
     }
 }
 
+
 #Preview {
-    BookDetailTopView()
+    BookDetailTopView(isImageTapped: {}, namespace: Namespace().wrappedValue, image: .exampleBook1)
 }

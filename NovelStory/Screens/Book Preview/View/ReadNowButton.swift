@@ -22,9 +22,10 @@ struct ReadNowButton: View {
                     .foregroundStyle(.white)
             }.padding()
                 .background(.main)
-                .clipShape(.capsule)
+               
             
         }.buttonStyle(ScaleButtonStyle())
+            .clipShape(.capsule)
     }
 }
 
